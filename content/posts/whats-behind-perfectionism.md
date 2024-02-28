@@ -3,6 +3,7 @@ title = 'Whats Behind Perfectionism'
 date = 2024-02-28T12:48:46-05:00
 draft = false
 +++
+Not sure what I missed. 
 
 1. We all feel shame to an extent.
 2. We are told to be shameless.
