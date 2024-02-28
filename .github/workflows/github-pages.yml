@@ -3,21 +3,24 @@ name: Deploy Hugo to GitHub Pages
 on:
   push:
     branches:
-      - main  # Or main, depending on your default branch
+      - main  # This targets pushes to the main branch
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: 'latest'
+
       - name: Build
         run: hugo --minify
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.MY_PAT }}  # Use your PAT stored as a secret
           publish_dir: ./public
